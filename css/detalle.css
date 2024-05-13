@@ -1,0 +1,278 @@
+/* ========================================================== */
+/* == Propiedades Globales ================================== */
+
+* {
+ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ======== */
+html, body {
+  height: 100%;
+}
+/* ======== */
+body {
+  font-size: 100%;
+  /*background-color: #292B2E;*/
+  background-color: #181419;
+}
+/* ======== */
+a {
+  text-decoration: none;
+}
+/* ======== */
+a:focus,
+a:focus-visible,
+input[type=text]:focus,
+input[type=text]:focus-visible {
+  /*-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;*/
+  outline-offset: 2px;
+  outline: 2px solid #27C9FF;  
+}
+
+/* ========================================================== */
+/* == Header ================================================ */
+
+header {
+  min-height: 38px;
+  padding: 4px 6px;
+  background-color: #221D24;
+}
+
+/* == Propiedades comunes =================================== */
+
+header {
+  min-height: 38px;
+  padding: 4px 6px;
+  border-bottom: solid 2px #B7ABBB;
+  background-color: #221D24;
+}
+
+/* == Propiedades comunes =================================== */
+
+.header_d-1,
+.header_d-1_d-1,
+.header_d-1_d-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* ======== */
+.header_d-1_d-1 a,
+.header_d-1_d-2_a-1,
+.header_d-1_d-2_a-2 {
+  padding: 2px 6px 0;
+  min-height: 26px;
+  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+}
+/* ======== */
+.header_d-1_d-2_a-1:hover, .header_d-1_d-2_a-2:hover {
+  background-color: #27C9FF;  
+}
+/* ======== */
+.header_d-1_d-2_a-1:active, .header_d-1_d-2_a-2:active {
+  background-color: #00A2D8;
+}
+
+/* == Contenedor de: logo y nombre-enlace del sitio, input-text de busqueda y enlaces: Entrar, Crear cuenta ==== */
+
+.header_d-1 {
+  max-width: 1280px;
+  margin: auto;
+  row-gap: 6px;
+}
+/* == Contenedor de: logo y nombre-enlace del sitio ==== */
+/*
+.header_d-1_d-1 { }
+*/
+/* == Imagen: Logo ==== */
+.header_d-1_d-1 img {
+  width: 40px;
+  height: 30px;
+}
+/* == Enlace: Nombre-enlace del sitio ==== */
+.header_d-1_d-1 a {
+  min-width: 102px;
+}
+/* == Contenedor de enlaces: Entrar y Crear cuenta ==== */
+.header_d-1_d-2 {
+  margin-left: auto;
+}
+/* == Enlace: Entrar ==== */
+.header_d-1_d-2_a-1 {
+  min-width: 58px;
+}
+/* == Enlace: Crear cuenta ==== */
+.header_d-1_d-2_a-2 {
+  min-width: 111px;
+}
+
+/* ============================================================= */
+/* == Principal ================================================ */
+
+#principal {
+  padding: 38px 6px;
+}
+/* == Contenedor base de Principal ==== */
+.principal_d-1 {
+  max-width: 1092px;
+  margin: auto;
+}
+/* == Titulo: Información ==== */
+.principal_d-1_h1-1 {
+  font-size: 1.5em;
+  padding-bottom: 6px;
+  border-bottom: solid 1px #423745;
+}
+/* == Contenedor de: imagen de portada del juego e información ==== */
+.principal_d-1_d-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+/* == Contenedor de: imagen de portada del juego ==== */
+.principal_d-1_d-1_d-1 {
+  max-width: 258px;
+  width: 100%;
+}
+/* == Imagen de portada del juego ==== */
+.principal_d-1_d-1_d-1 img {
+  display: block;
+  width: 240px;
+  height: 300px;
+  -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px;
+  border: 1px solid #423745;
+}
+
+/* == Contenedor de: información del juego ==== */
+.principal_d-1_d-1_d-2 {
+  display: block;
+  max-width: 780px;
+  width: 100%;
+  padding-left: 18px;
+  border-left: solid 1px #423745;
+}
+/* == Título: nombre del juego ==== */
+.principal_d-1_d-1_d-2 h2 {
+  display: table;
+  padding-bottom: 8px;
+  border-bottom: solid 1px #423745;
+  font-size: 1.25em;
+}
+/* == Título: título de descripción ==== */
+.principal_d-1_d-1_d-2 h3 {
+  margin-top: 12px;
+}
+/* == Descripción ==== */
+.principal_d-1_d-1_d-2 p {
+  font-size: 0.875em;
+  color: #CCC;
+}
+
+/* ========================================================== */
+/* == Footer ================================================ */
+
+footer {
+  min-height: 114px;
+  padding: 16px 6px;
+  border-top: solid 2px #B7ABBB;
+  background-color: #2C262F;
+}
+/* == Contenedor de: logo y nombre-enlace del sitio, input-text de busqueda y enlaces: Entrar, Crear cuenta ==== */
+.footer_d-1 {
+  display: block;
+  max-width: 1280px;
+  margin: auto;
+}
+/* == */
+.footer_d-1_d-1 {
+  display: flex;
+  padding-bottom: 12px;
+  border-bottom: solid 1px #4B404F;
+}
+
+/* == Contenedor del logo y nombre-enlace del sitio ==== */
+.footer_d-1_d-1_d-1 {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* == Logo ==== */
+.footer_d-1_d-1_d-1 img {
+  width: 40px;
+  height: 30px;
+}
+/* == Nombre-enlace del sitio ==== */
+.footer_d-1_d-1_d-1 a {
+  min-width: 102px;
+  min-height: 26px;
+  padding: 2px 6px 0;
+  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+}
+/* == */
+.footer_d-1_d-2 {
+  display: flex;
+}
+/* == */
+.footer_d-1_d-2_p-1 {
+  padding-top: 18px;
+  font-size: 12px;
+}
+
+/* ========================================================== */
+/* == Media Queries ========================================= */
+
+/* == Resolución de ancho máxima de 600px =================== */
+@media (max-width: 600px)
+{
+  /* ========================== */
+  /* == Header ================ */
+
+  /* == Contenedor de: logo y nombre-enlace del sitio, input-text de busqueda y enlaces: Entrar, Crear cuenta ==== */
+  .header_d-1 {
+    flex-wrap: wrap;
+  }
+  /* == Input-Text de busqueda del Header ==== */
+  .header_d-1_input-text-1 {
+    display: none;
+  }
+
+  /* ============================= */
+  /* == Principal ================ */
+
+  /* == Contenedor de: imagen de portada del juego e información ==== */
+  .principal_d-1_d-1 {
+    flex-wrap: wrap;
+  }
+  /* == Contenedor de: imagen de portada del juego ==== */
+  .principal_d-1_d-1_d-1 {
+    margin: auto;
+  }
+  /* == Contenedor de: información del juego ==== */  
+  .principal_d-1_d-1_d-2 {
+    justify-content: center;
+    max-width: 948px;
+    margin-top: 18px;
+    padding: 12px 0 0;
+    border-left: none;
+    border-top: solid 1px #423745;
+  }
+}
+
+/* == Resolución de ancho máxima de 240px ========================== */
+@media (max-width: 360px)
+{
+  /* ============================= */
+  /* == Principal ================ */
+  
+  /* == Imagen de portada del juego ==== */
+  .principal_d-1_d-1_d-1 img {
+    width: 144px;
+    height: 180px;
+    margin: auto;
+    -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;
+  }
+}

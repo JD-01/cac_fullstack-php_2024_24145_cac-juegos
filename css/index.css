@@ -1,0 +1,330 @@
+/* ========================================================== */
+/* == Propiedades Globales ================================== */
+
+* {
+ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ======== */
+html, body {
+  height: 100%;
+}
+/* ======== */
+body {
+  font-size: 100%;
+  /*background-color: #292B2E;*/
+  background-color: #181419;
+}
+/* ======== */
+a {
+  text-decoration: none;
+}
+/* ======== */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input[type=text]:focus,
+input[type=text]:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #27C9FF;  
+}
+
+/* ========================================================== */
+/* == Header ================================================ */
+
+header {
+  min-height: 38px;
+  padding: 4px 6px;
+  border-bottom: solid 2px #B7ABBB;
+  background-color: #221D24;
+}
+
+/* == Propiedades comunes =================================== */
+
+.header_d-1,
+.header_d-1_d-1,
+.header_d-1_d-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* ======== */
+.header_d-1_d-1 a,
+.header_d-1_d-2_a-1,
+.header_d-1_d-2_a-2 {
+  /*margin-left: 12px;*/
+  padding: 2px 6px 0;
+  min-height: 26px;
+  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+}
+/* ======== */
+.header_d-1_d-2_a-1:hover, .header_d-1_d-2_a-2:hover {
+  background-color: #27C9FF;
+}
+/* ======== */
+.header_d-1_d-2_a-1:active, .header_d-1_d-2_a-2:active {
+  background-color: #00A2D8;
+}
+
+/* == Contenedor de: logo y nombre-enlace del sitio, input-text de busqueda y enlaces: Entrar, Crear cuenta ==== */
+.header_d-1 {
+  max-width: 1280px;
+  margin: auto;
+  row-gap: 6px;
+}
+/* == Contenedor de: logo y nombre-enlace del sitio ==== */
+/*
+.header_d-1_d-1 { }
+*/
+/* == Imagen: Logo ==== */
+.header_d-1_d-1 img {
+  width: 40px;
+  height: 30px;
+}
+/* == Enlace: Nombre-enlace del sitio ==== */
+.header_d-1_d-1 a {
+  min-width: 102px;
+}
+/* == Input-Text: busqueda de juego ==== */
+.header_d-1_input-text-1 {
+  max-width: 250px;
+  width: 100%;
+  height: 28px;
+  margin-left: auto;
+  padding: 0 12px;
+  border-radius: 14px; -webkit-border-radius: 14px; -moz-border-radius: 14px;
+  border: 1px solid #423745;
+  outline: 0;
+  background-color: #2D252F;
+  font-size: 0.875em;
+  color: #CCC;
+}
+/* == Contenedor de enlaces: Entrar y Crear cuenta ==== */
+.header_d-1_d-2 {
+  margin-left: 6px;
+}
+/* == Enlace: Entrar ==== */
+.header_d-1_d-2_a-1 {
+  min-width: 58px;
+}
+/* == Enlace: Crear cuenta ==== */
+.header_d-1_d-2_a-2 {
+  min-width: 111px;
+}
+
+/* ============================================================= */
+/* == Principal ================================================ */
+
+#principal {
+  padding: 38px 6px ;
+}
+/* == Contenedor base de Principal ==== */
+.principal_d-1 {
+  max-width: 1092px;
+  margin: auto;
+}
+/* == Titulo (h1): Juegos para PC ==== */
+.principal_d-1_h1-1 {
+  font-size: 1.5em;
+  padding-bottom: 6px;
+  border-bottom: solid 1px #423745;
+}
+/* == Contenedor de: formulario de busqueda y enlaces de juegos ==== */
+.principal_d-1_d-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+/* == Contenedor de: formulario de busqueda ==== */
+.principal_d-1_d-1_d-1 {
+  max-width: 312px;
+  width: 100%;
+  padding-right: 12px;
+}
+/* == Titulo (h2): Buscar por ==== */
+.principal_d-1_d-1_d-1_h2-1 {
+  margin-top: 13px;
+  padding-bottom: 6px;
+  font-size: 1.25em;
+  border-bottom: solid 1px #423745;
+}
+/* == Label (Tipo 1): Nombre de campo del formulario (Nombre y Genero) ==== */
+.principal_d-1_d-1_d-1_l-tp-1 {
+  display: table;
+  margin-top: 29px;
+  padding: 0 0 2px 6px;
+}
+/* == Contenedor (Tipo 1) de: Input-Text y Button (botón buscar con imagen de lupa) ==== */
+.principal_d-1_d-1_d-1_d-tp-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 300px;
+  width: 100%;
+}
+/* == Contenedor (Tipo 1): Input-Text ==== */
+.principal_d-1_d-1_d-1_d-tp-1 input[type=text] {
+  max-width: 258px;
+  width: 100%;
+  height: 32px;
+  padding: 0 12px;
+  -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+  border: solid 1px #423745;
+  background-color: #2D252F;
+  font-size: 0.875em;
+}
+/* == Button (Tipo 1) contenedor de: Img (icono lupa) ==== */
+.principal_d-1_d-1_d-1_d-tp-1 button {
+  width: 40px;
+  height: 32px;
+  margin-left: 2px;
+  -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+  border: none;
+  background-color: #00BFFF;
+}
+.principal_d-1_d-1_d-1_d-tp-1 button:hover {
+  background-color: #27C9FF;
+}
+.principal_d-1_d-1_d-1_d-tp-1 button:active {
+  background-color: #00A2D8;
+}
+/* == Button (Tipo 1) contenedor de: Img (icono lupa) ==== */
+.principal_d-1_d-1_d-1_d-tp-1 button img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+
+/* == Contenedor de: enlaces de juegos ==== */
+.principal_d-1_d-1_d-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 780px;
+  width: 100%;
+  padding-left: 11px;
+  border-left: solid 1px #423745;
+  gap: 18px 12px;
+}
+/* == Enlace (Tipo 1) contenedor de: imagen y titulo de juego ==== */
+.principal_d-1_d-1_d-2_a-tp-1 {
+  width: 144px;
+}
+.principal_d-1_d-1_d-2_a-tp-1:focus,
+.principal_d-1_d-1_d-2_a-tp-1:focus-visible {
+  -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;  
+}
+/* == Contenedor (Enlace Tipo 1) de: imagen de juego ==== */
+.principal_d-1_d-1_d-2_a-tp-1 img {
+  display: block;
+  width: 144px;
+  height: 180px;
+  -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;
+  border: 1px solid #423745;
+}
+/* == Contenedor (Enlace Tipo 1) de: titulo de juego ==== */
+.principal_d-1_d-1_d-2_a-tp-1 h3 {
+  margin-top: 10px;
+  font-size: 0.875em;
+}
+/* ==== */
+.principal_d-1_d-1_d-2_a-tp-1 h3:hover {
+  color: #00BFFF;
+}
+
+/* ========================================================== */
+/* == Footer ================================================ */
+
+footer {
+  min-height: 114px;
+  padding: 16px 6px;
+  border-top: solid 2px #B7ABBB;
+  background-color: #2C262F;
+}
+/* == Contenedor base del footer ==== */
+.footer_d-1 {
+  display: block;
+  max-width: 1280px;
+  margin: auto;
+}
+/* == Contenedor de: Imagen (logo), Enlace (nombre-enlace del sitio), Párrafo (nombre del sitio y año actual) ==== */
+.footer_d-1_d-1 {
+  display: flex;
+  padding-bottom: 12px;
+  border-bottom: solid 1px #4B404F;
+}
+/* == Contenedor de: Imagen (logo) y Enlace (nombre-enlace del sitio) ==== */
+.footer_d-1_d-1_d-1 {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* == Imagen (logo) ==== */
+.footer_d-1_d-1_d-1 img {
+  width: 40px;
+  height: 30px;
+}
+/* == Enlace (nombre-enlace del sitio) ==== */
+.footer_d-1_d-1_d-1 a {
+  min-width: 102px;
+  min-height: 26px;  
+  padding: 2px 6px 0;
+  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+}
+/* == Contenedor de: Párrafo (nombre del sitio y año actual) ==== */
+.footer_d-1_d-2 {
+  display: flex;
+}
+/* == Párrafo (nombre del sitio y año actual) ==== */
+.footer_d-1_d-2_p-1 {
+  padding-top: 18px;
+  font-size: 12px;
+}
+
+/* ========================================================== */
+/* == Media Queries ========================================= */
+
+/* == Resolución de ancho máxima de 980px =================== */
+@media (max-width: 980px)
+{
+  /* == Contenedor de: formulario de busqueda y enlaces de juegos ==== */
+  .principal_d-1_d-1 {
+    flex-wrap: wrap;
+  }
+  /* == Contenedor de: formulario de busqueda ==== */
+  .principal_d-1_d-1_d-1 {
+    margin: auto;
+  }
+  /* == Contenedor de: enlaces de juegos ==== */
+  .principal_d-1_d-1_d-2 {
+    justify-content: center;
+    max-width: 948px;
+    margin-top: 25px;
+    padding: 12px 0 0;
+    border-left: none;
+    border-top: solid 1px #423745;
+  }
+}
+/* == Resolución de ancho máxima de 600px ========================== */
+@media (max-width: 600px)
+{
+   /* == Contenedor de: logo y nombre-enlace del sitio, input-text de busqueda y enlaces: Entrar, Crear cuenta ==== */
+  .header_d-1 {
+    flex-wrap: wrap;
+  }
+  /* == Input-Text: busqueda de juego ==== */
+  .header_d-1_input-text-1 {
+    display: none;
+  }
+  /* == Contenedor de enlaces: Entrar y Crear cuenta ==== */
+  .header_d-1_d-2 {
+    margin-left: auto;
+  }
+}
