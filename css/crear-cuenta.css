@@ -6,16 +6,16 @@
   margin: 0;
   padding: 0;
 }
-/* == ====*/
+/* ====== */
 html, body {
   height: 100%;
 }
-/* == ====*/
+/* ====== */
 body {
   font-size: 100%;
   background-color: #181419;
 }
-/* == ====*/
+/* ====== */
 a {
   text-decoration: none;
 }
@@ -32,6 +32,11 @@ input[type=password]:focus-visible,
 .principal_d-1_d-1_label-tp-2_span:focus-visible {
   outline-offset: 2px;
   outline: 2px solid #27C9FF;
+}
+/* ====== */
+input {
+  filter: none;
+  background: inherit;
 }
 
 /* ========================================================== */
@@ -85,11 +90,10 @@ header {
   max-width: 1280px;
   margin: auto;
   row-gap: 6px;
+
 }
 /* == Contenedor de: logo y nombre-enlace del sitio ==== */
-/*
-.header_d-1_d-1 { }
-*/
+
 /* == Imagen: Logo ==== */
 .header_d-1_d-1 img {
   width: 40px;
@@ -99,6 +103,7 @@ header {
 .header_d-1_d-1 a {
   min-width: 102px;
 }
+
 /* == Contenedor de enlaces: Entrar y Crear cuenta ==== */
 .header_d-1_d-2 {
   margin-left: auto;
@@ -118,7 +123,7 @@ header {
 #principal {
   padding: 38px 6px;
 }
-/* == Contenedor base de principal ==== */
+/* == Contenedor base ==== */
 .principal_d-1 {
   max-width: 1280px;
   margin: auto;
@@ -172,26 +177,41 @@ header {
   font-size: 1em;
   margin-top: 12px;
 }
-/* == Input Text (Tipo 1): Nombre, Correo, Contraseña y Confirmar contraseña ==== */
-.principal_d-1_d-1_input-text-tp-1,
-.principal_d-1_d-1_input-pass-tp-1 {
+/* == Input Text-Password (Tipo 1): Nombre, Correo, Contraseña y Confirmar contraseña ==== */
+.principal_d-1_d-1_input-text-pass-tp-1 {
   display: block;
   width: 100%;
   height: 32px;
   margin-top: 3px;
   padding: 0 12px;
   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
-  border: solid 2px #423745;
   outline: 0;
   background-color: #2D252F;
   font-size: 0.875em;
 }
-/* == Párrafo (Tipo 1): descripción de Input Text (Tipo 1) ==== */
+/* == Input Text-Password (Tipo 1): ... Estado 1 ==== */
+.principal_d-1_d-1_input-text-pass-tp-1-e-1 {
+  border: solid 2px #423745;
+}
+/* == Input Text-Password (Tipo 1): ... Estado 2 ==== */
+.principal_d-1_d-1_input-text-pass-tp-1-e-2 {
+  border: solid 2px #FF4E4E;
+}
+
+/* == Párrafo (Tipo 1): descripción de Input Text-Pass (Tipo 1) ==== */
 .principal_d-1_d-1_p-tp-1 {
   margin-top: 4px;
   font-size: 0.75em;
+}
+/* == Párrafo (Tipo 1): ... Estado 1 ==== */
+.principal_d-1_d-1_p-tp-1-e-1 {
   color: #CCCCCC;
 }
+/* == Párrafo (Tipo 1): ... Estado 2 ==== */
+.principal_d-1_d-1_p-tp-1-e-2 {
+  color: #FF4E4E;
+}
+
 /* == Label (Tipo 2) contenedor de: Input Checkbox, Span y P (Aceptar Condiciones de Uso) ==== */
 .principal_d-1_d-1_label-tp-2 {
   display: flex;
@@ -214,8 +234,15 @@ header {
   height: 24px;
   padding-top: 3px;
   -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
-  border: solid 2px #423745;
   background-color: #2D252F;
+}
+/* == Label (Tipo 2): Span ... Estado 1 ==== */
+.principal_d-1_d-1_label-tp-2_span-e-1 {
+  border: solid 2px #423745;
+}
+/* == Label (Tipo 2): Span ... Estado 2 ==== */
+.principal_d-1_d-1_label-tp-2_span-e-2 {
+  border: solid 2px #FF4E4E;
 }
 /* == Label (Tipo 2): Span: Img (imagen de visto) ==== */
 .principal_d-1_d-1_label-tp-2_span img {
@@ -224,16 +251,26 @@ header {
   height: 14px;
   margin: auto;
 }
+/* ======== */
 .principal_d-1_d-1_label-tp-2 input ~ .principal_d-1_d-1_label-tp-2_span img {
   display: none;
 }
+/* ======== */
 .principal_d-1_d-1_label-tp-2 input:checked ~ .principal_d-1_d-1_label-tp-2_span img {
   display: block;
 }
+/* ======== */
 .principal_d-1_d-1_label-tp-2 p {
   margin-left: 6px;
   font-size: 0.875em;
 }
+.principal_d-1_d-1_label-tp-2_p-e-1 {
+  color: #FFF;
+}
+.principal_d-1_d-1_label-tp-2_p-e-2 {
+  color: #FF4E4E;
+}
+
 /* == Button (submit): botón enviar de form-1 ==== */
 .principal_d-1_d-1_button-submit-1 {
   display: block;
@@ -245,9 +282,11 @@ header {
   outline: 0;
   background-color: #00BFFF;
 }
+/* ======== */
 .principal_d-1_d-1_button-submit-1:hover {
   background-color: #27C9FF;
 }
+/* ======== */
 .principal_d-1_d-1_button-submit-1:active {
   background-color: #00A2D8;
 }
@@ -289,7 +328,7 @@ footer {
 /* == Enlace: nombre-enlace del sitio ==== */
 .footer_d-1_d-1_d-1 a {
   min-width: 102px;
-  min-height: 26px;  
+  min-height: 26px;
   padding: 2px 6px 0;
   -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
 }
