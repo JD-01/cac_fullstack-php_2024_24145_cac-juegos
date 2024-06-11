@@ -3,35 +3,6 @@
 ( function ( ) {
 
 // =============================================================
-// Este método se utiliza para agregar controladores de eventos compatibles con la mayoría de los navegadores
-
-function agregarControlador ( vElemento, vTipo, vControlador )
-{
-  if ( vElemento.addEventListener ) {
-    vElemento.addEventListener ( vTipo, vControlador, false );
-  }
-  else if ( vElemento.attachEvent ) {
-    vElemento.attachEvent ( 'on' + vTipo, vControlador );
-  }
-  else {
-    vElemento [ 'on' + vTipo ] = vControlador;
-  }
-}
-
-// =============================================================
-// Este método se utiliza para desabilitar el comportamiento predeterminado del evento donde sea invocado
-
-function prevenirPorDefecto ( vElemento )
-{
-  if ( vElemento.preventDefault ) {
-    vElemento.preventDefault ( );
-  }
-  else {
-    vElemento.returnValue = false;
-  }
-}
-
-// =============================================================
 
 //
 const
@@ -68,6 +39,35 @@ vForm1.vInputPassContrasena.vEstadoMensajes = [ ];
 vForm1.vInputPassContrasena.vEstadoMensajes [ NO_VALIDADO ]                  = vForm1.vInputPassContrasena.vDescripcion.innerHTML;
 vForm1.vInputPassContrasena.vEstadoMensajes [ ERROR_LON_MIN ]                = 'Tienes que colocar tu contraseña';
 vForm1.vInputPassContrasena.vEstadoMensajes [ ERROR_CONTIENE_SOLO_ESPACIOS ] = 'Solo contiene espacios';
+
+// =============================================================
+// Este método se utiliza para agregar controladores de eventos compatibles con la mayoría de los navegadores
+
+function agregarControlador ( vElemento, vTipo, vControlador )
+{
+  if ( vElemento.addEventListener ) {
+    vElemento.addEventListener ( vTipo, vControlador, false );
+  }
+  else if ( vElemento.attachEvent ) {
+    vElemento.attachEvent ( 'on' + vTipo, vControlador );
+  }
+  else {
+    vElemento [ 'on' + vTipo ] = vControlador;
+  }
+}
+
+// =============================================================
+// Este método se utiliza para desabilitar el comportamiento predeterminado del evento donde sea invocado
+
+function prevenirPorDefecto ( vElemento )
+{
+  if ( vElemento.preventDefault ) {
+    vElemento.preventDefault ( );
+  }
+  else {
+    vElemento.returnValue = false;
+  }
+}
 
 // =============================================================
 
@@ -157,7 +157,6 @@ let evSubmit = function ( vEvento )
       vElemento.vInputPassContrasena.vDescripcion.classList.replace ( vElemento.vInputPassContrasena.vDescripcion.classList [ 2 ], 'principal_d-1_d-1_p-tp-1-e-2' );
       vElemento.vInputPassContrasena.vDescripcion.innerHTML = vForm1.vInputPassContrasena.vEstadoMensajes [ vElemento.vInputPassContrasena.vEstado ];
     }
-    //
     prevenirPorDefecto ( vEvento );
   }
 };

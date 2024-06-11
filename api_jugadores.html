@@ -13,7 +13,7 @@
 <!-- == ################################################# == -->
 
 <link rel="stylesheet" href="css/fuente_dm-sans.css">
-<link rel="stylesheet" href="css/detalle.css">
+<link rel="stylesheet" href="css/api-jugadores.css">
 
 <!-- == ################################################# == -->
 
@@ -61,7 +61,7 @@
   <div class="principal_d-1">
 
     <!-- == ## == -->
-    <h1 class="dm-sans-medium principal_d-1_h1-1">Información</h1>
+    <h1 class="dm-sans-medium principal_d-1_h1-1">API Jugadores</h1>
 
     <!-- == ## == -->
     <div class="principal_d-1_d-1">
@@ -70,43 +70,44 @@
       <div class="principal_d-1_d-1_d-1">
 
         <!-- == ## == -->
-        <img src="recursos/imagenes/img-juego-01.png" alt="" />        
+        <img src="recursos/imagenes/icono-jugador-1.png" alt="" />
+
+        <!-- == ## == -->
+        <hr/>
+
+        <!-- == ## == -->
+        <button type="button" id="button-buscar-jugador" name="button-buscar-jugador" class="dm-sans-medium">Buscar jugador</button>
 
       </div>
 
       <!-- == ## == -->
       <div class="principal_d-1_d-1_d-2">
-        
+ 
         <!-- == ## == -->
-        <h2 class="dm-sans-medium">The Elder Scrolls: Skyrim</h2>
-
-        <!-- == ## == --> 
-        <h3 class="dm-sans-medium">Desarrollador</h3>
-        <p class="dm-sans-regular">Bethesda Game Studios.</p>
-         
-         <!-- == ## == -->
-        <h3 class="dm-sans-medium">Distribuidor</h3>
-        <p class="dm-sans-regular">A través de tiendas minoristas: Bethesda Softworks.<br/>A través de tiendas en internet: por intermediación de la plataforma Steam de Valve Corporation.</p>
-
-        <!-- == ## == --> 
-        <h3 class="dm-sans-medium">Escritor</h3>
-        <p class="dm-sans-regular">Emil Pagliarulo.</p>
-
-        <!-- == ## == --> 
-        <h3 class="dm-sans-medium">Director</h3>
-        <p class="dm-sans-regular">Todd Howard.</p>
+        <h2 class="dm-sans-medium">Jugador Aleatorio</h2>
 
         <!-- == ## == -->
-        <h3 class="dm-sans-medium">Diseñador</h3>
-        <p class="dm-sans-regular">Bruce Nesmith.<br/>Kurt Kuhlmann.</p>
+        <div class="principal_d-1_d-1_d-2_d-1">
+
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">Nombre de usuario:</span> <span id="span-jugador-nombre-usuario"class="dm-sans-regular">jugador-nombre-usuario</span></p>
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">Correo:</span> <span id="span-jugador-correo" class="dm-sans-regular">jugador-correo</span></p>
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">Nombre:</span> <span id="span-jugador-nombre" class="dm-sans-regular">jugador-nombre</span></p>
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">Apellido:</span> <span id="span-jugador-apellido" class="dm-sans-regular">jugador-apellido</span></p>
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">Edad:</span> <span id="span-jugador-edad" class="dm-sans-regular">jugador-edad</span></p>
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">País:</span> <span id="span-jugador-pais" class="dm-sans-regular">jugador-pais</span></p>
+          <!-- == ## == -->
+          <p><span class="dm-sans-bold">Ciudad:</span> <span id="span-jugador-ciudad" class="dm-sans-regular">jugador-ciudad</span></p>
+
+        </div>
 
         <!-- == ## == -->
-        <h3 class="dm-sans-medium">Programador</h3>
-        <p class="dm-sans-regular">Guy Carver.</p>
-
-        <!-- == ## == -->
-        <h3 class="dm-sans-medium">Compositor</h3>
-        <p class="dm-sans-regular">Jeremy Soule.</p>
+        <p id="p-mensaje-busqueda" class="dm-sans-medium principal_d-1_d-1_d-2_p-1 principal_d-1_d-1_d-2_p-1-e-1">¡Jugador aleatorio encontrado exitosamente!</p>
 
       </div>
 
@@ -143,6 +144,10 @@
   </div>
 
 </footer>
+
+<!-- == ################################################# == -->
+
+<script src="js/api-jugadores.js"></script>
 
 <!-- == ################################################# == -->
 

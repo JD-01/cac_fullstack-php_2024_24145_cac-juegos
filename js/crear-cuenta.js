@@ -3,35 +3,6 @@
 ( function ( ) {
 
 // =============================================================
-// Este método se utiliza para agregar controladores de eventos compatibles con la mayoría de los navegadores
-
-function agregarControlador ( vElemento, vTipo, vControlador )
-{
-  if ( vElemento.addEventListener ) {
-    vElemento.addEventListener ( vTipo, vControlador, false );
-  }
-  else if ( vElemento.attachEvent ) {
-    vElemento.attachEvent ( 'on' + vTipo, vControlador );
-  }
-  else {
-    vElemento [ 'on' + vTipo ] = vControlador;
-  }
-}
-
-// =============================================================
-// Este método se utiliza para desabilitar el comportamiento predeterminado del evento donde sea invocado
-
-function prevenirPorDefecto ( vElemento )
-{
-  if ( vElemento.preventDefault ) {
-    vElemento.preventDefault ( );
-  }
-  else {
-    vElemento.returnValue = false;
-  }
-}
-
-// =============================================================
 
 //
 const
@@ -95,6 +66,35 @@ vForm1.vInputCheckboxAceptarCond              = document.getElementById ( 'form-
 vForm1.vInputCheckboxAceptarCond.vVisual      = document.getElementById ( 'form-1_input-checkbox-aceptar-cond-visual' );
 vForm1.vInputCheckboxAceptarCond.vDescripcion = document.getElementById ( 'form-1_input-checkbox-aceptar-cond-desc' );
 vForm1.vInputCheckboxAceptarCond.vEstado = NO_VALIDADO;
+
+// =============================================================
+// Este método se utiliza para agregar controladores de eventos compatibles con la mayoría de los navegadores
+
+function agregarControlador ( vElemento, vTipo, vControlador )
+{
+  if ( vElemento.addEventListener ) {
+    vElemento.addEventListener ( vTipo, vControlador, false );
+  }
+  else if ( vElemento.attachEvent ) {
+    vElemento.attachEvent ( 'on' + vTipo, vControlador );
+  }
+  else {
+    vElemento [ 'on' + vTipo ] = vControlador;
+  }
+}
+
+// =============================================================
+// Este método se utiliza para desabilitar el comportamiento predeterminado del evento donde sea invocado
+
+function prevenirPorDefecto ( vElemento )
+{
+  if ( vElemento.preventDefault ) {
+    vElemento.preventDefault ( );
+  }
+  else {
+    vElemento.returnValue = false;
+  }
+}
 
 // =============================================================
 
@@ -227,6 +227,20 @@ let evChangeInputCheckboxAceptarCond = function ( vEvento )
 
 // =============================================================
 
+let evFocusInputCheckboxAceptarCondVisual = function ( vEvento )
+{
+  let vElemento = vForm1.vInputCheckboxAceptarCond;
+  //
+  if ( vElemento.vEstado != NO_VALIDADO )
+  {
+    vElemento.vVisual.classList.replace ( vElemento.vVisual.classList [ 1 ], 'principal_d-1_d-1_label-tp-2_span-e-1' );
+    vElemento.vDescripcion.classList.replace ( vElemento.vDescripcion.classList [ 1 ], 'principal_d-1_d-1_label-tp-2_p-e-1' );
+    vElemento.vEstado = NO_VALIDADO;
+  }
+}
+
+// =============================================================
+
 let evSubmit = function ( vEvento )
 {
   vEvento = vEvento || window.event;
@@ -298,6 +312,7 @@ agregarControlador ( document, 'DOMContentLoaded', function ( vEvento )
   agregarControlador ( vForm1.vInputPassContrasena, 'focus', evFocusInputTextOrPass );
   agregarControlador ( vForm1.vInputPassConfirmarContrasena, 'focus', evFocusInputTextOrPass );
   agregarControlador ( vForm1.vInputCheckboxAceptarCond, 'change', evChangeInputCheckboxAceptarCond );
+  agregarControlador ( vForm1.vInputCheckboxAceptarCond.vVisual, 'focus', evFocusInputCheckboxAceptarCondVisual );
   agregarControlador ( vForm1, 'submit', evSubmit );
 });
 
